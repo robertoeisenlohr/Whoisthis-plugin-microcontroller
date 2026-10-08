@@ -8,7 +8,8 @@ of materials, wiring, assembly steps and the firmware `config.h` for that build.
 | Path | What |
 |------|------|
 | [`measurements.md`](measurements.md) | Exact sizes of the board, camera, battery, cables and the optional parts, with sources and what still has to be measured on the bench; the print allowances the models use. |
-| [`candidates.md`](candidates.md) | 21 form factors with envelopes and notes, 17 personas and what each would pick, 11 fabrication methods, and the follow-ups they imply. |
+| [`candidates.md`](candidates.md) | 21 form factors with envelopes and notes, which shape each of 17 personas would pick, 11 fabrication methods, and the follow-ups they imply. |
+| [`personas.md`](personas.md) | How each persona would *use* it: companion / ask / post styles, trigger, answer channel, consent ritual, charging habits, and the firmware and app features those needs rank first. |
 | [`lapel-badge/`](lapel-badge/) | **Built.** 56 × 31 × 14.5 mm magnetic chest badge; `bail = true` makes it a pendant. |
 | [`cap-brim-clip/`](cap-brim-clip/) | **Built.** 46 × 36 × 14.5 mm box under a cap brim, magnets through the brim, button underneath. |
 | [`point-and-ask-fob/`](point-and-ask-fob/) | **Built.** 74 × 29 × 13.9 mm key fob, camera in the nose, tail button and power switch, 500 mAh. |

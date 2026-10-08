@@ -72,6 +72,8 @@ Grouped by where the camera ends up. "Shell" says which printed shell it reuses.
 
 ## People, and what each would ask for
 
+(How each of them would *use* the device day to day is in [`personas.md`](personas.md).)
+
 Each persona starts from how they meet people, what they must not do, and what they would be proud
 to wear. The form they point at is in the tables above.
 

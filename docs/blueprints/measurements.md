@@ -72,11 +72,25 @@ builds: 6 × 6 mm tactile switches (12 mm long shaft variants fit a 2 mm wall), 
 | LP602030 LiPo, 300 mAh | 6 × 20 × 30 | same footprint, +20 % runtime |
 | LP502540 LiPo, 500 mAh | 5 × 25 × 40 | fob / pendant with a whole-day stills budget |
 | Neodymium magnets N52 Ø 8 × 2 (×2) and a steel backing plate | Ø 8 × 2 | magnetic lapel mount through fabric |
-| 6 × 6 × 9 tactile switch with a 7–8 mm cap | 6 × 6 × 9 | tap / long-press button |
-| 7 × 3.5 slide switch (SS12D00) | 8.6 × 3.5 × 4 | hard power cut for wearables |
+| 6 × 6 × 5 tactile switch (starter kit) | 6 × 6 × 5, plunger Ø3.5 × 1.5 | tap / long-press button in the badge and fob |
+| 6 × 6 × 3.1 low-profile tactile switch | 6 × 6 × 3.1 | button under the battery in the cap clip |
+| 24-pin 0.5 mm FPC extension, same-side contacts | 50–150 long, 13.5 wide | split builds (camera away from the board); verify contact orientation |
+| SS12D00 slide switch | 8.6 × 3.6 × 4, knob 1.5 proud | hard power cut (fob tail) |
 | 2.4 GHz flex antenna 30 × 10, 100 mm coax | 30 × 10 × 1 | relocating the antenna away from the body/battery |
 | M1.4 × 4 self-tapping screws | — | lid |
 | 22 mm quick-release watch strap (wrist) / 20 mm webbing clip (brim) | — | mounts |
+
+## Printed-part allowances used in the models (`lib/parts.scad`)
+
+| Parameter | Value |
+|-----------|-------|
+| Wall | 1.6 (4 perimeters at 0.4) |
+| Clearance per side, rigid parts / battery | 0.3 / 0.5 |
+| Lid lip | 1.2 tall, 0.15 clearance |
+| Plain lid / magnet lid | 2.0 / 2.6 (2.2 pocket + 0.4 skin) |
+| Lens window | Ø7 through, Ø11 × 0.6 recess outside |
+| USB-C plug cut-out | 13 × 7 centred on the receptacle |
+| Button plunger hole / cap | Ø4.4 / Ø8–10 disc with Ø4 stem |
 
 ## Runtime arithmetic used in `candidates.md`
 

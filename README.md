@@ -26,7 +26,7 @@ on the same phone. Nothing leaves the phone; the plugin declares no internet dom
 | `Discovery.kt`, `Devices.kt` | mDNS (`_whoisthis._tcp`) discovery through Android NSD, plus one typed address; boards → contract `DeviceInfo` (the host is the device id). |
 | `PluginActivity.kt` | Plugin screen: discovered boards, add by address, connect/disconnect, capture facts and the latest frame (in memory only), what was sent to the board. |
 | `firmware/` | Arduino sketch for the XIAO ESP32-S3 Sense: Wi-Fi provisioning portal, mDNS, `/whoisthis`, `/capture`, `:81/stream`, `/events`, `/present`. See `firmware/README.md` for the protocol and wiring. |
-| `docs/blueprints/` | Physical design: measurements of the bought parts and the form-factor candidates; the chosen one gets drawings, OpenSCAD and a BOM. |
+| `docs/blueprints/` | Physical design: measurements of the bought parts, the catalogue of form factors (personas, fabrication methods), and three built designs (lapel badge / pendant, cap-brim clip, point-and-ask fob) with OpenSCAD models, STLs, dimensioned drawings, BOM, wiring and firmware config. |
 | `.github/workflows/release.yml` | Merge to `main` → signed APK + firmware binary, GitHub Release, `whoisthis.online/download/plugins/microcontroller/latest.json`. |
 
 ## Build

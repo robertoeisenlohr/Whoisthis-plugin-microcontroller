@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The board is reached over the local Wi-Fi network (HTTP on the LAN; nothing leaves it). -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- mDNS discovery of boards advertising _whoisthis._tcp. -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="false"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        <!-- The CaptureDevice contract. Only the WhoIsThis app (pinned signer) is served; see Callers. -->
+        <service
+            android:name=".CaptureDeviceService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="online.whoisthis.capture.CaptureDevice" />
+            </intent-filter>
+            <meta-data android:name="online.whoisthis.capture.contract_version" android:value="1" />
+            <meta-data android:name="online.whoisthis.capture.plugin_id" android:value="microcontroller" />
+        </service>
+
+        <!-- Shows discovered boards, lets you add one by address, and mirrors the capture.
+             Fold/unfold, rotation and font changes must not recreate it mid-capture. -->
+        <activity
+            android:name=".PluginActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|density|fontScale|uiMode|keyboardHidden"
+            android:excludeFromRecents="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="whoisthis-microcontroller" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

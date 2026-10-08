@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WhoIsThis · Microcontroller</string>
+    <string name="intro">Companion plugin for WhoIsThis. It talks to a XIAO ESP32-S3 Sense (or any board running the WhoIsThis firmware) over your local Wi-Fi and hands its camera frames to the WhoIsThis app on this phone only. Nothing is uploaded by this plugin.</string>
+    <string name="host_hint">Board address (empty = discover with mDNS), e.g. 192.168.1.42 or whoisthis-cam.local</string>
+    <string name="discover">Discover boards</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="devices_title">Boards</string>
+    <string name="capture_title">Camera</string>
+    <string name="display_title">Board output</string>
+    <string name="thumbnail_description">Latest frame from the board (shown here only, never stored)</string>
+</resources>
